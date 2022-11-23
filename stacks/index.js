@@ -1,8 +1,10 @@
 import { StorageStack } from "./StorageStack";
-import { App } from "@serverless-stack/resources";
+import { Api, App } from "@serverless-stack/resources";
+import { ApiStack } from "./ApiStack";
 
 /**
  * @param {App} app
+ * some comments
  */
 export default function (app) {
   app.setDefaultFunctionProps({
@@ -12,5 +14,5 @@ export default function (app) {
       format: "esm",
     },
   });
-  app.stack(StorageStack);
+  app.stack(StorageStack).stack(ApiStack);
 }
