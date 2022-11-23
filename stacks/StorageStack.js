@@ -1,5 +1,5 @@
 import { Table } from "@serverless-stack/resources";
-import { Bucket } from "aws-cdk-lib/aws-s3";
+import { Bucket } from "@serverless-stack/resources"
 
 export function StorageStack({ stack, app }) {
   // Create an S3 bucket
