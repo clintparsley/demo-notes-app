@@ -13,8 +13,8 @@ export function FrontendStack({ stack, app }) {
     customDomain:
         app.stage === "prod"
             ? {
-                domainName: "notes.cparsley.com",
-                domainAlias: "www.notes.cparsley.com",
+                domainName: "cparsley.com",
+                domainAlias: "www.cparsley.com",
             }
             : undefined,
     path: "frontend",
