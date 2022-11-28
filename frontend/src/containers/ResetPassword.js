@@ -72,7 +72,7 @@ export default function ResetPassword() {
   function renderRequestCodeForm() {
     return (
       <form onSubmit={handleSendCodeClick}>
-        <FormGroup bsSize="large" controlId="email">
+        <FormGroup size="lg" controlId="email">
           <FormLabel>Email</FormLabel>
           <FormControl
             autoFocus
@@ -82,9 +82,9 @@ export default function ResetPassword() {
           />
         </FormGroup>
         <LoaderButton
-          block
+          block="true"
           type="submit"
-          bsSize="large"
+          size="lg"
           isLoading={isSendingCode}
           disabled={!validateCodeForm()}
         >
@@ -97,7 +97,7 @@ export default function ResetPassword() {
   function renderConfirmationForm() {
     return (
       <form onSubmit={handleConfirmClick}>
-        <FormGroup bsSize="large" controlId="code">
+        <FormGroup size="lg" controlId="code">
           <FormLabel>Confirmation Code</FormLabel>
           <FormControl
             autoFocus
@@ -110,7 +110,7 @@ export default function ResetPassword() {
           </FormText>
         </FormGroup>
         <hr />
-        <FormGroup bsSize="large" controlId="password">
+        <FormGroup size="lg" controlId="password">
           <FormLabel>New Password</FormLabel>
           <FormControl
             type="password"
@@ -118,7 +118,7 @@ export default function ResetPassword() {
             onChange={handleFieldChange}
           />
         </FormGroup>
-        <FormGroup bsSize="large" controlId="confirmPassword">
+        <FormGroup size="lg" controlId="confirmPassword">
           <FormLabel>Confirm Password</FormLabel>
           <FormControl
             type="password"
@@ -127,9 +127,9 @@ export default function ResetPassword() {
           />
         </FormGroup>
         <LoaderButton
-          block
+          block="true"
           type="submit"
-          bsSize="large"
+          size="lg"
           isLoading={isConfirming}
           disabled={!validateResetForm()}
         >

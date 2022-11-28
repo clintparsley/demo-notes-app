@@ -46,12 +46,12 @@ export default function Settings() {
   return (
     <div className="Settings">
       <LinkContainer to="/settings/email">
-        <LoaderButton block="true" bsSize="large">
+        <LoaderButton block="true" size="lg">
           Change Email
         </LoaderButton>
       </LinkContainer>
       <LinkContainer to="/settings/password">
-        <LoaderButton block="true" bsSize="large">
+        <LoaderButton block="true" size="lg">
           Change Password
         </LoaderButton>
       </LinkContainer>

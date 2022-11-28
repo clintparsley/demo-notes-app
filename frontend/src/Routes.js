@@ -10,6 +10,8 @@ import Settings from "./containers/Settings";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 import ResetPassword from "./containers/ResetPassword";
+import ChangePassword from "./containers/ChangePassword";
+import ChangeEmail from "./containers/ChangeEmail";
 
 export default function Links() {
   return (
@@ -65,6 +67,25 @@ export default function Links() {
             </UnauthenticatedRoute>
           }
         />
+
+        <Route
+          path="/settings/password"
+          element={
+            <AuthenticatedRoute>
+                <ChangePassword />
+            </AuthenticatedRoute>
+          }
+        />
+
+        <Route
+          path="/settings/email"
+          element={
+            <AuthenticatedRoute>
+                <ChangeEmail />
+            </AuthenticatedRoute>
+          }
+        />
+        
       {
         /* Finally, catch all unmatched routes */
       }
