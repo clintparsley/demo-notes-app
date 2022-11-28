@@ -6,6 +6,8 @@ import { onError } from "../lib/errorLib";
 import config from "../config";
 import { Elements } from "@stripe/react-stripe-js";
 import BillingForm from "../components/BillingForm";
+import { LinkContainer } from "react-router-bootstrap";
+import LoaderButton from "../components/LoaderButton";
 import "./Settings.css";
 
 export default function Settings() {
@@ -43,6 +45,17 @@ export default function Settings() {
   
   return (
     <div className="Settings">
+      <LinkContainer to="/settings/email">
+        <LoaderButton block="true" bsSize="large">
+          Change Email
+        </LoaderButton>
+      </LinkContainer>
+      <LinkContainer to="/settings/password">
+        <LoaderButton block="true" bsSize="large">
+          Change Password
+        </LoaderButton>
+      </LinkContainer>
+      <hr />
       <Elements
         stripe={stripePromise}
         fonts={[
